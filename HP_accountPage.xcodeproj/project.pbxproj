@@ -14,6 +14,10 @@
 		F1C70CAE2A79ACB1005D5E6D /* HP_accountPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70CAD2A79ACB1005D5E6D /* HP_accountPageTests.swift */; };
 		F1C70CB82A79ACB1005D5E6D /* HP_accountPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70CB72A79ACB1005D5E6D /* HP_accountPageUITests.swift */; };
 		F1C70CBA2A79ACB1005D5E6D /* HP_accountPageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70CB92A79ACB1005D5E6D /* HP_accountPageUITestsLaunchTests.swift */; };
+		F1C70CC72A7AF9E9005D5E6D /* OptimaDisplay-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1C70CC62A7AF29B005D5E6D /* OptimaDisplay-Book.ttf */; };
+		F1C70CC82A7AF9EE005D5E6D /* OptimaDisplay-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1C70CC62A7AF29B005D5E6D /* OptimaDisplay-Book.ttf */; };
+		F1C70CC92A7AF9EE005D5E6D /* OptimaDisplay-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1C70CC62A7AF29B005D5E6D /* OptimaDisplay-Book.ttf */; };
+		F1C70CCC2A7B0789005D5E6D /* myImpact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70CCB2A7B0789005D5E6D /* myImpact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		F1C70CB32A79ACB1005D5E6D /* HP_accountPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HP_accountPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C70CB72A79ACB1005D5E6D /* HP_accountPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HP_accountPageUITests.swift; sourceTree = "<group>"; };
 		F1C70CB92A79ACB1005D5E6D /* HP_accountPageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HP_accountPageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F1C70CC62A7AF29B005D5E6D /* OptimaDisplay-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OptimaDisplay-Book.ttf"; path = "../../Downloads/OptimaDisplay-Book.ttf"; sourceTree = SOURCE_ROOT; };
+		F1C70CCA2A7AFA15005D5E6D /* OptimaDisplay-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OptimaDisplay-Book.ttf"; sourceTree = "<group>"; };
+		F1C70CCB2A7B0789005D5E6D /* myImpact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myImpact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +81,7 @@
 		F1C70C902A79ACB0005D5E6D = {
 			isa = PBXGroup;
 			children = (
+				F1C70CCB2A7B0789005D5E6D /* myImpact.swift */,
 				F1C70C9B2A79ACB0005D5E6D /* HP_accountPage */,
 				F1C70CAC2A79ACB1005D5E6D /* HP_accountPageTests */,
 				F1C70CB62A79ACB1005D5E6D /* HP_accountPageUITests */,
@@ -94,6 +102,7 @@
 		F1C70C9B2A79ACB0005D5E6D /* HP_accountPage */ = {
 			isa = PBXGroup;
 			children = (
+				F1C70CCA2A7AFA15005D5E6D /* OptimaDisplay-Book.ttf */,
 				F1C70C9C2A79ACB0005D5E6D /* HP_accountPageApp.swift */,
 				F1C70C9E2A79ACB0005D5E6D /* ContentView.swift */,
 				F1C70CA02A79ACB1005D5E6D /* Assets.xcassets */,
@@ -123,6 +132,7 @@
 			children = (
 				F1C70CB72A79ACB1005D5E6D /* HP_accountPageUITests.swift */,
 				F1C70CB92A79ACB1005D5E6D /* HP_accountPageUITestsLaunchTests.swift */,
+				F1C70CC62A7AF29B005D5E6D /* OptimaDisplay-Book.ttf */,
 			);
 			path = HP_accountPageUITests;
 			sourceTree = "<group>";
@@ -231,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C70CC72A7AF9E9005D5E6D /* OptimaDisplay-Book.ttf in Resources */,
 				F1C70CA42A79ACB1005D5E6D /* Preview Assets.xcassets in Resources */,
 				F1C70CA12A79ACB1005D5E6D /* Assets.xcassets in Resources */,
 			);
@@ -240,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C70CC82A7AF9EE005D5E6D /* OptimaDisplay-Book.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C70CC92A7AF9EE005D5E6D /* OptimaDisplay-Book.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +272,7 @@
 			files = (
 				F1C70C9F2A79ACB0005D5E6D /* ContentView.swift in Sources */,
 				F1C70C9D2A79ACB0005D5E6D /* HP_accountPageApp.swift in Sources */,
+				F1C70CCC2A7B0789005D5E6D /* myImpact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
