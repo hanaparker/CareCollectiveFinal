@@ -61,17 +61,180 @@ struct circleView : View {
 
 struct HomeView: View {
     var body: some View {
-        NavigationView {
-            ZStack{
-                Color.white
-            }
+        VStack (spacing:0){
+            Header()
             
-            .navigationTitle("Home")
-            .foregroundColor(.black)
+            ScrollView(.vertical,showsIndicators: false){
+                stories()
+                
+                Divider()
+                post()
+                Spacer()
+                post(image:"post2",description: "Huge shout out to William Floyd High School for their efforts in raising $2,500 for breast cancer reasearch!")
+                
+            }
         }
-        
     }
 }
+
+        
+struct postContent: View{
+    var image: String = "post1"
+    var body: some View{
+        VStack{
+            Image(image)
+                .resizable()
+                .frame(width:.infinity)
+                .aspectRatio(contentMode: .fit)
+            HStack{
+                HStack{
+                    Image(systemName: "heart") //when i click how do i make it go red
+                    Image (systemName: "bubble.left")
+                    Image(systemName:"paperplane")
+                }
+                Spacer()
+                Image (systemName:"bookmark")
+                Image (systemName:"info.circle")
+                    .resizable()
+                    .frame(width:30, height: 30)
+                    .foregroundColor(.blue) //change color
+            }
+            .padding(.horizontal,12)
+            .padding(.vertical,9)
+        }
+    }
+}
+struct post: View{
+    var image: String = "post1"
+    var description: String = "Our worldwide annual Relay For Life event is coming up! Find out how you can participate and even start your own race in your community!"
+    var body: some View{
+        VStack(alignment:.leading,spacing:0.0){
+            postHeader()
+            postContent(image:image)
+            Text("Liked by hanaparker, siri.m, and others")
+                .font(.footnote)
+                .frame(width:.infinity, alignment: .leading)
+                .padding(.horizontal,12)
+                .foregroundColor(.gray)
+            
+            Text (description)
+                .font(.footnote)
+                .frame(width:.infinity, alignment: .leading)
+                .padding(.horizontal, 12)
+            
+            HStack{
+                HStack{
+                    HStack(spacing:7.0){
+                        Image("profile1")
+                            .resizable()
+                            .frame(width: 30,height: 30)
+                            .cornerRadius(50)
+                            .position(x: 25,y:20)
+                        Text("Add Comment...")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                            .position(x: -35,y:20)
+                    }
+                    Spacer()
+                    HStack(alignment: .center){
+                        Text("👍")
+                        Text("👏")
+                        Text("😍")
+                        Image(systemName: "plus.circle")
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.horizontal,12)
+                    .padding(.vertical,9)
+                }
+            }
+        }
+    }
+}
+struct postHeader: View{
+    var body: some View{
+        HStack{
+            HStack{
+                Image("profile2")
+                    .resizable()
+                    .frame(width: 30,height: 30,alignment: .center)
+                    .cornerRadius(50)
+                
+                Text("americancancersociety")
+                    .font(.caption)
+                    .fontWeight(.bold)
+                
+            }
+            Spacer()
+            Image("")
+        }
+        .padding(.vertical,10)
+        .padding(.horizontal,8)
+    }
+}
+struct stories: View{
+    var body: some View{
+        ScrollView(.horizontal, showsIndicators:false){
+            HStack(spacing:15.0){
+                Story(image: "profile1",name:"Your Story")
+                Story(image: "profile2",name:"americanca...")
+                Story(image: "profile3",name:"hanaparker")
+                Story(image: "profile4",name:"siri.m")
+                Story(image: "profile5",name:"texaschil...")
+            }
+            .padding(.horizontal,8)
+        }
+        .padding(.vertical,10)
+    }
+}
+struct Story: View {
+    var image: String = "profile"
+    var name: String = "name"
+    var body: some View {
+        VStack {
+            VStack{
+                Image(image)
+                    .resizable()
+                    .frame(width: 60, height: 60)
+                    .cornerRadius(30) //
+        }
+            .overlay(
+            Circle()
+                .stroke(LinearGradient(colors: [.blue,.green,.gray], startPoint: .topLeading, endPoint: .bottomTrailing),lineWidth:2)
+                .frame(width:68, height: 68)
+        )
+        .frame(width: 70, height: 70)
+        Text(name)
+            .font(.caption)
+        }
+    }
+}
+struct Header: View {
+    var body: some View {
+        HStack {
+            Image("logo")
+                .resizable()
+                .frame(width: 50, height: 50)
+            Spacer()
+            Text("Your Feed")
+                .bold()
+                .font(.system(size: 24)) //change color
+            
+            
+            HStack(alignment: .center, spacing: 10) {
+                Spacer()
+                Image(systemName:"magnifyingglass")
+                Image(systemName:"message")
+                Image(systemName:"bookmark")
+            }
+            Spacer()
+        }
+        .padding(.horizontal, 15)
+        .padding(.vertical, 3)
+    }
+}
+
+        
+    
 struct MapView: View {
     @State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
     
