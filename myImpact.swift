@@ -9,7 +9,24 @@ import SwiftUI
 
 struct myImpact: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color("lighGrey")
+                .background(Color("lightGrey").edgesIgnoringSafeArea(.top))
+            VStack{
+                Text("Organizations:")
+                    .font(.largeTitle)
+                    
+                
+                Spacer()
+                    .frame(width: 30, height: 300)
+                Text("Hours:")
+                    .font(.largeTitle)
+                Spacer()
+                    .frame(width: 30, height: 275)
+                
+            }
+        }
+        
     }
 }
 
