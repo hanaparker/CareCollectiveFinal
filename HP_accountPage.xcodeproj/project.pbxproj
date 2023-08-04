@@ -23,7 +23,6 @@
 		F1C70CD22A7B474F005D5E6D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70CD12A7B474F005D5E6D /* Settings.swift */; };
 		F1C70CD62A7C2CB8005D5E6D /* tac.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70CD52A7C2CB7005D5E6D /* tac.swift */; };
 		F1C70CD82A7C2CC0005D5E6D /* pp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70CD72A7C2CC0005D5E6D /* pp.swift */; };
-		F1C70CDA2A7C4C02005D5E6D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C70CD92A7C4C02005D5E6D /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		F1C70CD12A7B474F005D5E6D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F1C70CD52A7C2CB7005D5E6D /* tac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tac.swift; sourceTree = "<group>"; };
 		F1C70CD72A7C2CC0005D5E6D /* pp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pp.swift; sourceTree = "<group>"; };
-		F1C70CD92A7C4C02005D5E6D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 				F1C70CD12A7B474F005D5E6D /* Settings.swift */,
 				F1C70CCD2A7B46F2005D5E6D /* Favorites.swift */,
 				F1C70CCB2A7B0789005D5E6D /* myImpact.swift */,
-				F1C70CD92A7C4C02005D5E6D /* Extension.swift */,
 				F1C70C9B2A79ACB0005D5E6D /* HP_accountPage */,
 				F1C70CAC2A79ACB1005D5E6D /* HP_accountPageTests */,
 				F1C70CB62A79ACB1005D5E6D /* HP_accountPageUITests */,
@@ -288,7 +285,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C70CDA2A7C4C02005D5E6D /* Extension.swift in Sources */,
 				F1C70CD22A7B474F005D5E6D /* Settings.swift in Sources */,
 				F1C70C9F2A79ACB0005D5E6D /* ContentView.swift in Sources */,
 				F1C70CD02A7B4747005D5E6D /* myPosts.swift in Sources */,

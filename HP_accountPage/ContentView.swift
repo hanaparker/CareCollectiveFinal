@@ -61,6 +61,7 @@ struct circleView : View {
 
 struct HomeView: View {
     var body: some View {
+        
         VStack (spacing:0){
             Header()
             
@@ -241,7 +242,7 @@ struct MapView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(UIColor.universalBlue)
+                Color(.blue) //CHANGED
                     .ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 20.0) {
                     Text("Opportunity Map")
