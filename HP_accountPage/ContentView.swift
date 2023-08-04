@@ -65,7 +65,7 @@ struct post: View{
             postContent(image:image)
             Text("Liked by hanaparker, siri.g, and others")
                 .font(.footnote)
-                .frame(width:.infinity, alignment: .leading)
+                .frame(width: .infinity, alignment: .leading)
                 .padding(.horizontal,12)
                 .foregroundColor(.gray)
             
@@ -127,7 +127,7 @@ struct stories: View{
     var body: some View{
         ScrollView(.horizontal, showsIndicators:false){
             HStack(spacing:15.0){
-                Story(image: "gigiUNICEF",name:"Your Story")
+                Story(image: "Gigiunicef",name:"Your Story")
                 Story(image: "profile2",name:"americanca...")
                 Story(image: "profile3",name:"hanaparker")
                 Story(image: "profile4",name:"siri.m")
@@ -193,8 +193,9 @@ struct MapView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color("lightGrey") //CHANGED
-                    .ignoresSafeArea()
+                Color("lighGrey")
+                    .background(Color("lightGrey")
+                        .edgesIgnoringSafeArea(.top))
                 VStack(alignment: .leading, spacing: 20.0) {
                     Text("Opportunity Map")
                         .foregroundColor(Color(red: 0.5450980392156862, green: 0.6, blue: 0.5137254901960784))
