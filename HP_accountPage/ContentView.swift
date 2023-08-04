@@ -9,55 +9,6 @@ import SwiftUI
 import MapKit
 
 
-struct circleView : View {
-    @State var label: String
-    var body : some View{
-        ZStack{
-            Rectangle()
-                .fill(Color("sage"))
-                .frame(width: 80, height: 40)
-            
-            if(label == "My Impact"){
-                NavigationLink(destination: myImpact()){
-                    Text("\(label)")
-                }
-                .font(.footnote)
-                .foregroundColor(Color("darkGrey"))
-            } else if (label == "Favorites"){
-                NavigationLink(destination: Favorites()){
-                    Text("\(label)")
-                }
-                .font(.footnote)
-                .foregroundColor(Color("darkGrey"))
-                
-            } else if (label == "My Posts"){
-                NavigationLink(destination: myPosts()){
-                    Text("\(label)")
-                }
-                .font(.footnote)
-                .foregroundColor(Color("darkGrey"))
-                
-            } else if (label == "Settings"){
-                NavigationLink(destination: Settings()){
-                    Text("\(label)")
-                }
-                .font(.footnote)
-                .foregroundColor(Color("darkGrey"))
-                
-            } /*else if (label == "Log Out"){
-                NavigationLink(destination: logInOut()){
-                    Text("\(label)")
-                }
-                .font(.footnote)
-                .foregroundColor(Color("darkGrey"))
-                
-            } */
-                
-            
-            
-        }
-    }
-}
 
 struct HomeView: View {
     var body: some View {
@@ -112,7 +63,7 @@ struct post: View{
         VStack(alignment:.leading,spacing:0.0){
             postHeader()
             postContent(image:image)
-            Text("Liked by hanaparker, siri.m, and others")
+            Text("Liked by hanaparker, siri.g, and others")
                 .font(.footnote)
                 .frame(width:.infinity, alignment: .leading)
                 .padding(.horizontal,12)
@@ -176,7 +127,7 @@ struct stories: View{
     var body: some View{
         ScrollView(.horizontal, showsIndicators:false){
             HStack(spacing:15.0){
-                Story(image: "profile1",name:"Your Story")
+                Story(image: "gigiUNICEF",name:"Your Story")
                 Story(image: "profile2",name:"americanca...")
                 Story(image: "profile3",name:"hanaparker")
                 Story(image: "profile4",name:"siri.m")
@@ -242,7 +193,7 @@ struct MapView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(.blue) //CHANGED
+                Color("lightGrey") //CHANGED
                     .ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 20.0) {
                     Text("Opportunity Map")
@@ -324,7 +275,84 @@ struct MapView: View {
  */
 
 
-
+var namesy = "Gigi Hadid"
+var newName = " "
+struct circleView : View {
+    @State var namey = ""
+    @State var no = ""
+    @State var label: String
+    @State private var presentPopup = false
+    var body : some View{
+        ZStack{
+            Rectangle()
+                .fill(Color("sage"))
+                .frame(width: 80, height: 40)
+            
+            if(label == "Camera Roll"){
+                NavigationLink(destination: myImpact()){
+                    Text("\(label)")
+                }
+                .font(.footnote)
+                .foregroundColor(Color("darkGrey"))
+            } else if (label == "Favorites"){
+                NavigationLink(destination: Favorites()){
+                    Text("\(label)")
+                }
+                .font(.footnote)
+                .foregroundColor(Color("darkGrey"))
+                
+            } else if (label == "My Posts"){
+                NavigationLink(destination: myPosts()){
+                    Text("\(label)")
+                }
+                .font(.footnote)
+                .foregroundColor(Color("darkGrey"))
+                
+            } else if (label == "Settings"){
+                NavigationLink(destination: Settings()){
+                    Text("\(label)")
+                }
+                .font(.footnote)
+                .foregroundColor(Color("darkGrey"))
+                
+            } /*else if (label == "Edit Name"){
+                Button("Edit Name") {
+                  presentPopup = true
+                }
+                .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
+                    Text("meow")
+                    Text("\(no)")
+                    
+                    TextField("Type Name Here", text: $namey) //bind the property
+                        .multilineTextAlignment(.leading)
+                        .padding()
+                    
+                    Button("Change"){
+                        no = "\(namey)"
+                    }
+                    
+                    
+                        .font(.footnote)
+                        .foregroundColor(Color("darkGrey"))
+                }
+            } else if (label == "Edit Picture"){
+                Button("Edit Picture") {
+                  presentPopup = true
+                }
+                .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
+                  Text("test")
+                    .frame(width: 100, height: 100)
+                }
+                .font(.footnote)
+                .foregroundColor(Color("darkGrey"))
+                
+            }
+                
+            */
+            
+        }
+    }
+}
 
 struct AccountPage: View {
     @State private var org = ""
@@ -334,6 +362,19 @@ struct AccountPage: View {
     @State private var org1 = " "
     @State private var hour1 = " "
     @State private var date1 = " "
+    
+
+    @State private var name = "Type your name here"
+    @State private var name2 = ""
+    
+    @State private var picture = "greenSquare"
+    @State private var picture2 = ""
+    
+    @State private var presentPopup = false
+    @State private var presentPopup2 = false
+    
+
+    
     var body: some View {
         NavigationView {
             ZStack{
@@ -346,34 +387,83 @@ struct AccountPage: View {
                         
                         VStack{
                             VStack (spacing: 5){
-                                Image("yoshi")
+                                Image("\(picture)")
                                     .resizable(resizingMode:.stretch)
                                     .aspectRatio(contentMode:.fit)
                                     .cornerRadius(10)
                                     .frame(width:200, height: 300)
                                     .clipShape(Circle())
                                 
-                                Text("Blue Yoshi")
+                                Text("\(name)")
                                     .font(Font.custom("Optimaisplay-Book", size: 32, relativeTo: .title))
-                                Image("dinner")
+                                
                                    
                                 
                             
                                 VStack{
                                     
                                     ScrollView(.horizontal) {
-                                        HStack(spacing: 10){
-                                                circleView(label: "My Impact")
+                                        HStack(spacing: 35){
+                                            circleView(label: "Camera Roll")
                                             circleView(label: "Favorites")
                                             circleView(label: "My Posts")
                                             circleView(label: "Settings")
-                                            //circleView(label: "Log Out")
                                             
-                                              
+                                            Button("Edit Name") {
+                                                presentPopup = true
+                                            }
+                                            .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
+                                                Text("Change name here:")
+                                                    .font(.largeTitle)
+                                                
+                                                TextField("Name", text: $name2) //bind the property
+                                                    .multilineTextAlignment(.center)
+                                                    .padding()
+                                                
+                                                Button("change"){
+                                                    name = "\(name2)"
+                                                    
+                                                }
+                                                
+                                                
+                                                    .frame(width: 100, height: 100)
+                                            }
                                             
+                                            Button("Edit Picture") {
+                                                presentPopup2 = true
+                                            }
+                                            .popover(isPresented: $presentPopup2, arrowEdge: .bottom) {
+                                                
                                             
-                                        } .padding()
-                                    } .frame(height: 100)
+                                                Text("Change your picture here:")
+                                                    .font(.largeTitle)
+                                                
+                                                TextField("Picture", text: $picture2) //bind the property
+                                                    .multilineTextAlignment(.center)
+                                                    .padding()
+                                                
+                                                Button("change"){
+                                                    picture = "\(picture2)"
+                                                    
+                                                }
+                                                
+                                                Button("save"){
+                                                    
+                                                }
+                                                
+                                                
+                                                    .frame(width: 100, height: 100)
+                                            }
+                                            
+                                        }
+                                        
+                                        
+                                    }
+                                        
+                                        
+                                    
+                                        .padding()
+                                    .frame(height: 100)
                                     
                                     HStack (spacing: 70){
                                         Text("Orgs")

@@ -13,16 +13,51 @@ struct myImpact: View {
             Color("lighGrey")
                 .background(Color("lightGrey").edgesIgnoringSafeArea(.top))
             VStack{
-                Text("Organizations:")
+                Text("My Photos:")
                     .font(.largeTitle)
                     
+                ScrollView(.horizontal){
+                    HStack{
+                        Image("gigidancing")
+                            .resizable(resizingMode:.stretch)
+                            .aspectRatio(contentMode:.fit)
+                            .cornerRadius(10)
+                            .frame(width:300, height: 300)
+                        Image("gigigroup")
+                            .resizable(resizingMode:.stretch)
+                            .aspectRatio(contentMode:.fit)
+                            .cornerRadius(10)
+                            .frame(width:300, height: 300)
+                        Image("gigiwave")
+                            .resizable(resizingMode:.stretch)
+                            .aspectRatio(contentMode:.fit)
+                            .cornerRadius(10)
+                            .frame(width:300, height: 300)
+                    }
+                }
+                
+                ScrollView(.horizontal){
+                    HStack{
+                        Image("gigiongo")
+                            .resizable(resizingMode:.stretch)
+                            .aspectRatio(contentMode:.fit)
+                            .cornerRadius(10)
+                            .frame(width:300, height: 300)
+                        Image("gigitalking")
+                            .resizable(resizingMode:.stretch)
+                            .aspectRatio(contentMode:.fit)
+                            .cornerRadius(10)
+                            .frame(width:300, height: 300)
+                        Image("gigiteaching")
+                            .resizable(resizingMode:.stretch)
+                            .aspectRatio(contentMode:.fit)
+                            .cornerRadius(10)
+                            .frame(width:300, height: 300)
+                    }
+                }
                 
                 Spacer()
-                    .frame(width: 30, height: 300)
-                Text("Hours:")
-                    .font(.largeTitle)
-                Spacer()
-                    .frame(width: 30, height: 275)
+                    .frame(width: 30, height: 50)
                 
             }
         }
